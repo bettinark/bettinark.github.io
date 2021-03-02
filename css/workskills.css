@@ -1,0 +1,770 @@
+/*
+ * Globals
+ */
+/*fonts*/
+@font-face{
+  font-family:'Mukta';
+  src: url(../Personal Website/fonts/Mukta/Mukta-Regular.ttf)
+}
+
+@font-face{
+  font-family:'Montserrat';
+  src: url(../Personal Website/fonts/Montserrat/Montserrat-Regular.ttf)
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Space Mono Bold'), local('SpaceMono-Bold'), url(https://fonts.gstatic.com/s/spacemono/v5/i7dMIFZifjKcF5UAWdDRaPpZUFWaHi6WZ3Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+
+/*
+* Home box
+*/
+.home-return:hover {
+  color: RGB(212, 102, 94);
+  transform:scale(1.1);
+  padding:0.5rem;
+  filter: brightness(120%);
+}
+
+.home-return {
+  transition: 0.5s;
+  position: absolute;
+  margin:0;
+  top:2vh;
+  left: 2vh;
+  background-color: #fff;
+  border-radius: 0.25em 0.25em;
+  z-index: 1;
+  padding:0.35rem;
+}
+/*
+ * Background and Title
+ */
+
+/*Homepage Title*/
+.title{
+  /*position: relative;*/
+  font-family:'Mukta',sans-serif;
+  font-size: 10vw;
+  line-height: 14vw;
+  text-align: left;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  animation: fadein 2s;
+}
+
+.inner-cover{
+  position: relative;
+  top: 10vh;
+  margin-left: 28vw;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  animation: fadein 2s;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: RGB(36, 125, 213);
+  font-family:'Montserrat',sans-serif;
+}
+
+body {
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .05);
+}
+
+
+.container {
+  display: flex;
+  align-content: center;
+  min-height: 180px;
+  max-width: 95%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.box {
+  background-color: RGB(166, 197, 228);
+  border: 1px solid white;
+  min-height: 175px;
+  flex: 1 1 175px;
+  margin:5px;
+  border-radius: 5px;
+  transition: 1s;
+  text-decoration: none;
+  font-family:'Montserrat',sans-serif;
+}
+
+.icon{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: all 1s ease .05s;
+}
+
+.box .icon {
+width: 100%;
+  }
+
+.job-title{
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color:white;
+  opacity: 0;
+  transition: all 1s ease .05s;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.box:hover .job-title{
+  opacity: 1;
+}
+
+.box:hover .icon{
+  transition: all 1s ease .05s;
+  opacity: 1;
+}
+
+.overlay-image{
+  max-width: 40%;
+  position: relative;
+  float:left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.container a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 1s ease .05s;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  align-content: center;
+  min-height: 200px;
+  max-width:98%;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 22%;
+  padding: 10px;
+}
+
+h2 {
+  padding: 0 0 5px 0;
+  font-size: 1.3rem;
+}
+
+.skills{
+  padding: 20px 0 40px 0;
+}
+
+.awards{
+  padding: 20px 0 40px 0;
+  max-width: 90%;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.awards h2{
+  padding: 10px 0 5px 0
+}
+
+.sidenav{
+  list-style-type:none;
+  -webkit-animation: fadeInRight 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeInRight 1s; /* Firefox < 16 */
+  animation: fadeInRight 1s;
+}
+
+/*
+ * Side Menu
+ */
+ #menu a:hover {
+  left: 2rem; /* On mouse-over, make the elements appear as they should */
+  color: RGB(55,55,55);
+  font-weight: 600;
+  background-color: RGB(166, 197, 228);
+ }
+
+ /* Link formats */
+ #about {
+  position: fixed;
+  top:8rem;
+  background-color: RGB(67, 138, 209);
+ }
+
+ #projects {
+  position: fixed;
+  top: 12.5rem;
+  background-color: RGB(67, 138, 209);
+ }
+
+ #skills {
+  position: fixed;
+  top: 17rem;
+  background-color: RGB(67, 138, 209);
+ }
+
+ #contact {
+  position: fixed;
+  top: 21.5rem;
+  background-color: RGB(67, 138, 209);
+ }
+
+
+ .mobile-menu a {
+   position: static; /* Position them relative to the browser window */
+   transition: 0.35s; /* Add transition on hover */
+   padding: 2rem; /* 15px padding */
+   padding-left: 2rem;
+   width: 16rem; /* Set a specific width */
+   text-decoration: none; /* Remove underline */
+   font-size: 1.5rem; /* Increase font size */
+   color: white; /* White text color */
+   border-radius: 5px 5px; /* Rounded corners on the top right and bottom right side */
+   text-align: right;
+   font-family:'Montserrat',sans-serif;
+   font-weight: 500;
+   list-style-type:none;
+}
+
+/*Style for menu links*/
+.mobile-menu li a {
+ display: block;
+ min-width:140px;
+ text-align: center;
+ font-family: 'Montserrat',sans-serif;;
+ color: #fff;
+ background: RGB(255, 255, 255, 0.5);
+ text-decoration: none;
+ margin-left:1rem;
+ padding: 2vh 1vw;
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-ms-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+}
+
+
+/*Hide dropdown links until they are needed*/
+.mobile-menu li ul {
+ display: none;
+}
+
+/*Make dropdown links vertical*/
+.mobile-menu li ul li {
+ display: block;
+ float: none;
+}
+
+/*Prevent text wrapping*/
+.mobile-menu li ul li a {
+ width: auto;
+ min-width: 300px;
+ padding: 0 20px;
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.mobile-menu .show-menu {
+ text-decoration: none;
+ color: #fff;
+ background: RGB(36, 125, 213);
+ text-align: center;
+ padding: 10px 15px;
+ display: none;
+ cursor: pointer;
+ font-size: 1.5em;
+}
+
+.mobile-menu .show-menu span{
+  padding-left: 25px;
+}
+
+/*Hide checkbox*/
+.mobile-menu input[type=checkbox]{
+   display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+.mobile-menu input[type=checkbox]:checked ~ #menu{
+   display:block;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 850px){
+
+  body{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+ .mobile-menu .lines {
+   border-bottom: 15px double #f8f8f8;
+   border-top: 5px solid #f8f8f8;
+   content:"";
+   height: 5px;
+   width:20px;
+   padding-right:15px;
+   float: right;
+}
+
+.sidenav{
+  -webkit-animation: fadein 0.15s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.15s; /* Firefox < 16 */
+  animation: fadein 0.15s;
+  z-index: 1;
+}
+
+.inner-cover{
+  position: relative;
+  top: 5rem;
+  margin-left: 5vw;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  animation: fadein 2s;
+}
+
+.title{
+  font-family:'Mukta',sans-serif;
+  font-size: 28vw;
+  line-height: 25vw;
+  text-align: left;
+}
+
+ /*Make dropdown links appear inline*/
+ .mobile-menu ul {
+   position: static;
+   display: none;
+ }
+ /*Create vertical spacing*/
+ .mobile-menu li {
+   margin-bottom: 1px;
+ }
+ /*Make all menu links full width*/
+ .mobile-menu ul li, .mobile-menu li a {
+   width: 100%;
+ }
+ /*Display 'show menu' link*/
+ .mobile-menu .show-menu {
+   display:block;
+ }
+ /* Link formats */
+ #about {
+  top:8rem;
+  background-color: RGB(67, 138, 209);
+ }
+
+ #projects {
+  top: 11.5rem;
+  background-color: RGB(67, 138, 209);
+ }
+
+ #skills {
+  top: 15rem;
+  background-color: RGB(67, 138, 209);
+ }
+
+ #contact {
+  top: 18.5rem;
+  background-color: RGB(67, 138, 209);
+ }
+
+  .job-title{
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8); /* Black see-through */
+    color:white;
+    position: relative;
+  }
+
+  name{
+    font-size: .8rem;
+  }
+
+  .cd-popup-container{
+    display:block;
+    width: 100%;
+    height: 100%;
+    left: 4vw;
+    top:0;
+    position: fixed;
+  }
+
+  .cd-popup{
+   display:block;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+  }
+
+  .overlay-image{
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+}
+
+/* Style the links inside the sidenav */
+.mobile-menu a {
+ position: absolute;; /* Position them relative to the browser window */
+ left: -1rem; /* Position them outside of the screen */
+ transition: 0.35s; /* Add transition on hover */
+ padding: 1rem; /* 15px padding */
+ width: 15rem; /* Set a specific width */
+ text-decoration: none; /* Remove underline */
+ font-size: 2rem; /* Increase font size */
+ color: white; /* White text color */
+ border-radius: 5px 5px; /* Rounded corners on the top right and bottom right side */
+ text-align: center;
+ font-family:'Montserrat',sans-serif;
+ font-weight: 500;
+ z-index: 1;
+}
+
+
+/*
+ * Paragraph
+ */
+.description{
+  text-align:left;
+  padding:2rem 3rem 2rem 0rem;
+  font-size:1.25rem;
+  min-width: 93%;
+}
+
+
+.message {
+  font-family:'Montserrat',sans-serif;
+  font-weight: normal;
+  color:white;
+  padding-bottom: 1rem;
+}
+
+.message a {
+  text-decoration:none;
+  background-color:rgba(204, 226, 237,0.25);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.message a:hover {
+  color:black;
+  background-color: rgba(204, 226, 237,0.8);
+}
+
+
+.name{
+  font-family:'Montserrat',sans-serif;
+  color:white;
+}
+
+
+
+
+button {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color:RGB(36, 125, 213);;
+  border: 2px solid white;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  z-index: 1;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 10px;
+  transition: all 1s ease .05s;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  animation: fadein 2s;
+}
+
+button:hover {
+  background-color: RGB(166, 197, 228);
+  color: black;
+  border-radius: 10px;
+  z-index: 0.7;
+}
+
+.close_button{
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+
+.last_button{
+  position: absolute;
+  left: 10px;
+}
+
+
+/* Popup */
+
+.cd-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(77, 75, 79,0.8);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  overflow-y: auto;
+  z-index: 10000;
+}
+
+.cd-popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+
+.cd-popup-container {
+  position:fixed;
+  overflow: scroll;
+  bottom: 0;
+  border: 0;
+  width: 85% ;
+  max-width: 85% ;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  background: RGB(36, 125, 213);;
+  border-radius: .7em .7em;
+  -webkit-transform: translateY(-40px);
+  -moz-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  -o-transform: translateY(-40px);
+  transform: translateY(-40px);
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.cd-popup-container p {
+  margin: 0;
+  padding: 2em 1em;
+  padding-top: 0.5em;
+}
+
+.cd-popup-container .cd-popup-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.cd-close-button {
+  color: #545454;
+  border-bottom: none;
+}
+
+.cd-popup-container .cd-popup-close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 8px;
+}
+
+.cd-popup-container .cd-popup-close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  right: 8px;
+}
+
+.is-visible .cd-popup-container {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 170px) {
+  .cd-popup-container {
+    margin: 2em auto;
+  }
+}
+
+
+/* Form */
+
+label:hover {
+  cursor: text  ;
+}
+
+.description-form {
+  background: rgb(252, 247, 255) ;
+  height: auto;
+  margin: 10px auto;
+  max-width: 85%;
+  overflow: scroll;
+  width: 100%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: rgba(26, 26, 26, 0.1) 0 1px 3px 0;
+  -webkit-box-shadow: rgba(26, 26, 26, 0.1) 0 1px 3px 0;
+  box-shadow: rgba(26, 26, 26, 0.1) 0 1px 3px 0;
+}
+
+
+
+
+
+
+
+/*
+ * Footer
+ */
+ footer {
+   display: flex;
+   margin: auto;
+   position: fixed;
+   color: rgba(255, 255, 255, .3);
+   font-family:'Montserrat',sans-serif;
+   left: 0; bottom: 1vh; right: 0;
+   justify-content: center;
+   font-size: 1.5vw;
+ }
+
+ @keyframes fadein {
+     from { opacity: 0; }
+     to   { opacity: 1; }
+ }
+
+ /* Firefox < 16 */
+ @-moz-keyframes fadein {
+     from { opacity: 0; }
+     to   { opacity: 1; }
+ }
+
+ /* Safari, Chrome and Opera > 12.1 */
+ @-webkit-keyframes fadein {
+     from { opacity: 0; }
+     to   { opacity: 1; }
+ }
+
+ /* Internet Explorer */
+ @-ms-keyframes fadein {
+     from { opacity: 0; }
+     to   { opacity: 1; }
+ }
+
+ /* Opera < 12.1 */
+ @-o-keyframes fadein {
+     from { opacity: 0; }
+     to   { opacity: 1; }
+ }
+ @-webkit-keyframes fadeInRight {
+     0% {
+         opacity: 0;
+         -webkit-transform: translateX(-30px);
+         }
+     100% {
+         opacity: 1;
+         -webkit-transform: translateX(0);
+           }
+     }
+
+ @keyframes fadeInRight {
+       0% {
+           opacity: 0;
+           transform: translateX(-30px);
+           }
+       100% {
+             opacity: 1;
+             transform: translateX(0);
+           }
+          }
+
+ .fadeInRight {
+           -webkit-animation-name: fadeInRight;
+           animation-name: fadeInRight;
+          }
+
+
+          /* Decription Form */
+
+          .description-form {
+            background: #ffffff  ;
+            height: auto;
+            margin: 10px auto;
+            max-width: 85%;
+            overflow: scroll;
+            width: 100%;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 15px;
+            -moz-box-shadow: rgba(26, 26, 26, 0.1) 0 1px 3px 0;
+            -webkit-box-shadow: rgba(26, 26, 26, 0.1) 0 1px 3px 0;
+            box-shadow: rgba(26, 26, 26, 0.1) 0 1px 3px 0;
+          }
+
+
+          .description-form .message,
+          .description-form .name {
+            padding: 10px;
+            text-align: left;
+            overflow-x: hidden;
+            position: relative;
+            -moz-border-radius: none  ;
+            -webkit-border-radius: none ;
+            border-radius: none ;
+          }
+
+
+          @media (max-width: 500px) {
+            .description-form .name {
+              width: 100% ;
+            }
+          }
+
+          .description-form .message {
+            border-bottom: 1px #e6e6e6 solid ;
+            border-top: 1px #e6e6e6 solid ;
+            font-size: 1rem;
+            padding-bottom: 1rem;
+          }
