@@ -1,2 +1,2 @@
-# bettinark.github.io
-My first website
+# personal-site
+ A personal site and the first website I made from scratch
