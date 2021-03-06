@@ -54,22 +54,68 @@
 .title{
   /*position: relative;*/
   font-family:'Mukta',sans-serif;
-  font-size: 15vw;
+  font-size: 8vw;
   line-height: 13vw;
-  text-align: justify;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   animation: fadein 2s;
-  visibility: hidden;
-  background-color: rgba(0,0,0,0.2);
+  background-color: transparent;
+}
+
+.wrapper {
+  position: relative;
+  height: 6vh;
+  display: flex;
+  margin: 0;
+}
+
+.typing-demo {
+  /*position: relative;*/
+  width: 31ch;
+  animation: typing 3s steps(31), blink 1s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .05vw solid;
+  font-family: monospace;
+  font-size: 5vh;
+  /*padding-left: 25vw;*/
+  align-self:flex-end;
+  top:15vw;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
 
 
-button{
-  font-size: 15vw;
-  visibility: hidden;
-  }
 
+.go-home{
+  font-size:3em;
+  text-decoration: none;
+  text-align: center;
+  color: RGB(55,55,55);
+  background-color: rgba(202, 215, 237,0.5);
+  border-radius: 0.1em;
+  padding: 0.2em;
+  border-color: white;
+  outline-color: white;
+  transition: all 1s ease;
+}
+
+.go-home:hover{
+  color: white;
+  background: RGB(42, 64, 99);
+  transform: scale(1.1);
+}
 
 
 /*
@@ -82,7 +128,6 @@ body {
   padding: 0;
   height: 100%;
   font-family:'Montserrat',sans-serif;
-  background-image: url('../Personal Website/graphics/404error.png');
   background-color: RGB(42, 64, 99);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -232,17 +277,15 @@ transition: all 0.4s ease 0s;
     background-size: auto;
   }
 
-  button{
-    visibility: visible;
-  }
 
   .go-home{
     text-decoration: none;
     text-align: center;
-    color: white;
-    background: RGB(42, 64, 99);
+    color: black;
+    background-color: rgba(202, 215, 237,0.5);
     border-radius: 5px;
     padding: 2px;
+    font-size: 10vw;
   }
 
  .mobile-menu .lines {
@@ -277,9 +320,19 @@ transition: all 0.4s ease 0s;
   visibility: visible;
 }
 
-.h2{
-  visibility: visible;
+.typing-demo {
+  position: relative;
+  top: 2vh;
+  width: 31ch;
+  animation: typing 3s steps(22), blink .75s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .5vw solid;
+  font-family:monospace;
+  font-size: 5vw;
+  align-self:flex-end;
 }
+
 
 .button{
   visibility: visible;
