@@ -250,6 +250,11 @@ body {
 
  /*Responsive Styles*/
  @media screen and (max-width : 850px){
+
+   html{
+     overflow-x: hidden;
+   }
+
   .mobile-menu .lines {
     border-bottom: 15px double #f8f8f8;
     border-top: 5px solid #f8f8f8;
@@ -321,6 +326,27 @@ body {
   #contact {
    top: 18.5rem;
    background-color: RGB(250, 120, 120);
+  }
+
+  .scroll-to-top {
+    z-index: 3000;
+    min-width:100px;
+    right: 5%;
+    bottom:-1vh;
+    display:none;
+    position: fixed;
+    font-size: 2rem;
+  }
+  .scroll-to-top a {
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(100,100,100,0.5);
+    line-height: 3.1rem;
+    border-radius: 10%;
+    text-decoration:none;
+    visibility: visible;
+
   }
 
  }
@@ -395,6 +421,11 @@ body {
 #image-description{
    color: rgba(255, 255, 255, .8);
    font-size: 0.7rem;
+ }
+
+ .scroll-to-top{
+   display:none;
+   visibility: hidden;
  }
 
 /*
