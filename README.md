@@ -4,4 +4,4 @@
  Find the site at https://bettinark.github.io/
  
  
-<img width="1280" alt="Personal Site Homepage" src="https://user-images.githubusercontent.com/79861802/110355251-04e25400-8007-11eb-8a6b-a5c9f6878b74.png">
+<a href="https://bettinark.github.io/"><img width="1280" alt="Personal Site Homepage" src="https://user-images.githubusercontent.com/79861802/110355251-04e25400-8007-11eb-8a6b-a5c9f6878b74.png"></a>
